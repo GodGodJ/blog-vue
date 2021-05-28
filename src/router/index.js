@@ -10,7 +10,13 @@ const routes = [
   },
   {
     path: '/index',
-    component: Index
+    component: Index,
+    children:[
+      {
+        path: '/',
+        component: (resolve) =>require(['@/views/Blog'],resolve)
+      }
+    ]
   }
 
 ]
