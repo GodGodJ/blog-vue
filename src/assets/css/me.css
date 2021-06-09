@@ -1,0 +1,19 @@
+.width{
+    width: 20% !important;
+}
+.right{
+    float: right !important;
+}
+.matop-larger{
+    margin-top: 10px!important;
+}
+
+.width-small{
+    width: 5% !important;
+}
+.width-all{
+    width: 100% !important;
+}
+.matop-verybig{
+    margin-top: 50px;
+}

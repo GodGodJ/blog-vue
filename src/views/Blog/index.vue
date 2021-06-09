@@ -1,44 +1,65 @@
 <template>
-    <div>
 
-        <el-row>
-            <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-                <el-card :body-style="{ padding: '0px' }">
-                    <img src="../../assets/img/head.jpg" class="image">
-                    <div style="padding: 14px;">
-                        <span>blog标题</span>
-                        <div class="bottom clearfix">
-                            <time class="time">{{ currentDate }}</time>
-                            <el-button type="text" class="button">操作按钮</el-button>
-                        </div>
-                    </div>
-                </el-card>
-            </el-col>
-        </el-row>
+<el-row>
+    <el-col :offset="4" :span="8" class="matop-verybig">
+        <el-card class="box-card width-all matop-larger">
+            <div slot="header" class="clearfix ">
+                <span>卡片名称</span>
+                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </div>
+            <div v-for="o in 4" :key="o" class="text item">
+                {{'列表内容 ' + o }}
+            </div>
+        </el-card>
+        <el-card class="box-card width-all matop-larger">
+            <div slot="header" class="clearfix ">
+                <span>卡片名称</span>
+                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </div>
+            <div v-for="o in 4" :key="o" class="text item">
+                {{'列表内容 ' + o }}
+            </div>
+        </el-card>
+        <el-card class="box-card width-all matop-larger">
+            <div slot="header" class="clearfix ">
+                <span>卡片名称</span>
+                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </div>
+            <div v-for="o in 4" :key="o" class="text item">
+                {{'列表内容 ' + o }}
+            </div>
+        </el-card>
+        <el-card class="box-card width-all matop-larger">
+            <div slot="header" class="clearfix ">
+                <span>卡片名称</span>
+                <el-button style="float: right; padding: 3px 0" ype="text">操作按钮</el-button>
+            </div>
+            <div v-for="o in 4" :key="o" class="text item">
+                {{'列表内容 ' + o }}
+            </div>
+        </el-card>
+        <el-pagination
+                background
+                layout="prev, pager, next"
+                :total="1000" class="matop-verybig">
+        </el-pagination>
+    </el-col>
 
-    </div>
+
+
+</el-row>
+
 
 
 </template>
 <style>
-    .time {
-        font-size: 13px;
-        color: #999;
+    @import "../../assets/css/me.css";
+    .text {
+        font-size: 14px;
     }
 
-    .bottom {
-        margin-top: 13px;
-        line-height: 12px;
-    }
-
-    .button {
-        padding: 0;
-        float: right;
-    }
-
-    .image {
-        width: 100%;
-        display: block;
+    .item {
+        margin-bottom: 18px;
     }
 
     .clearfix:before,
@@ -46,18 +67,15 @@
         display: table;
         content: "";
     }
-
     .clearfix:after {
         clear: both
+    }
+
+    .box-card {
+        width: 480px;
     }
 </style>
 
 <script>
-    export default {
-        data() {
-            return {
-                currentDate: new Date()
-            };
-        }
-    }
+
 </script>
