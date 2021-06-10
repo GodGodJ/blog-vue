@@ -12,13 +12,6 @@ const routes = [
   {
     path:"/admin",
     redirect: "/login",
-    component:'AdminHome',
-    children: [
-      {
-        path:"/index",
-        component: (resolve) =>require(['@/views/Admin/Index'],resolve)
-      }
-    ]
   },
   {
     path:"/login",
