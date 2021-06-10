@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '@/views/HomeIndex'
-import AdminHome from '@/views/Admin/AdminHome'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,10 +9,7 @@ const routes = [
     path: '/',
     redirect: '/index'
   },
-  {
-    path:"/admin",
-    redirect: "/login",
-  },
+
   {
     path:"/login",
     component: (resolve) =>require(['@/views/Admin/Login'],resolve)
@@ -36,6 +33,16 @@ const routes = [
       {
         path: '/aboutme',
         component: (resolve) =>require(['@/views/AboutMe'],resolve)
+      },
+      {
+        path:"/admin",
+        redirect: "/login",
+        children: [
+          {
+            path:'/index',
+            component: (resolve) =>require(['@/views/Admin/Index'],resolve)
+          }
+        ]
       }
     ]
   }
