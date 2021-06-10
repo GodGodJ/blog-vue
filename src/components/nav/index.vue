@@ -8,11 +8,12 @@
             @select="handleSelect"
             background-color="#545c64"
             text-color="#fff"
-            active-text-color="#ffd04b">
-        <el-menu-item index="1">首页</el-menu-item>
-        <el-menu-item index="2">分类</el-menu-item>
-        <el-menu-item index="3">标签</el-menu-item>
-        <el-menu-item index="4">归档</el-menu-item>
+            active-text-color="#ffd04b"
+            router>
+        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="technology">技术</el-menu-item>
+        <el-menu-item index="life">生活</el-menu-item>
+        <el-menu-item index="aboutme">关于我</el-menu-item>
         <el-input v-model="input" placeholder="请输入内容" class="width matop-larger"></el-input>
         <el-button type="primary" icon="el-icon-search">搜索</el-button>
         <el-dropdown class="width-small right matop-larger">
