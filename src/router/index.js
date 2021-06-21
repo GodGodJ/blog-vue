@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '@/views/HomeIndex'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,7 +13,17 @@ const routes = [
 
   {
     path:"/login",
-    component: (resolve) =>require(['@/views/Admin/Login'],resolve)
+    component: (resolve) =>require(['@/views/Login'],resolve)
+  },
+  {
+    path:"/admin",
+    component: (resolve) =>require(['@/views/AdminHomeIndex'],resolve),
+    children: [
+      {
+        path:'/adminindex',
+        component: (resolve) =>require(['@/views/AdminIndex'],resolve)
+      }
+    ]
   },
   {
     path: '/index',
@@ -34,16 +45,8 @@ const routes = [
         path: '/aboutme',
         component: (resolve) =>require(['@/views/AboutMe'],resolve)
       },
-      {
-        path:"/admin",
-        redirect: "/login",
-        children: [
-          {
-            path:'/index',
-            component: (resolve) =>require(['@/views/Admin/Index'],resolve)
-          }
-        ]
-      }
+
+
     ]
   }
 

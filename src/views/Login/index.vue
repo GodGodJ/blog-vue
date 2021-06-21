@@ -40,7 +40,7 @@
             },
             login(){
                 let that = this;
-                that.$router.push('/admin/index');
+                that.$router.push('/adminindex');
             }
         }
     };
@@ -70,7 +70,7 @@
         height: 100vh;
         /*background: rgba(19, 30, 70, 1);*/
 
-        background:url("../../../assets/img/main-content.jpg") no-repeat;
+        background:url("../../assets/img/main-content.jpg") no-repeat;
         background-size: 100% 100%;
     }
     .container {
